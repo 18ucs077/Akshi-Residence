@@ -1,0 +1,33 @@
+<%-include ('../partials/header') %>
+<h1 style="text-align: center">Edit Comment</h1>
+<!-- to put everthing inside a box -->
+<div class="container">
+  <div class="row">
+    <div style="width: 30%; margin: 30px auto">
+      <form
+        action="/villas/<%= Villa_id %>/comments/<%= comment._id %>?_method=PUT"
+        method="POST"
+      >
+        <!-- for spacing in text , image and button, we will add div around each one of them -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="comment[text]"
+            value="<%= comment.text %>"
+          />
+        </div>
+        <!--   -->
+
+        <div class="form-group">
+          <button class="btn btn-lg btn-default btn-block btn-primary">
+            Submit!
+          </button>
+        </div>
+      </form>
+      <a href="/villas"><b>Go Back!</b></a>
+    </div>
+  </div>
+</div>
+
+<%-include ('../partials/footer') %>

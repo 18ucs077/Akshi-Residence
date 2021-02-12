@@ -1,0 +1,37 @@
+<%- include('./partials/header.ejs') %>
+<h1 style="text-align: center">Login</h1>
+<div class="container">
+  <div class="row">
+    <!-- to reduce the size of these components -->
+    <div style="width: 30%; margin: 30px auto">
+      <form action="/login" method="POST">
+        <!-- form-group is used for spacing between these rows -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="username"
+            placeholder="username"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            placeholder="password"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-default btn-block btn-primary">
+            Submit!
+          </button>
+        </div>
+      </form>
+
+      <a href="/villas"><b>Go Back!</b></a>
+    </div>
+  </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

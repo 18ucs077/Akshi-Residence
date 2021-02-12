@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs') %>
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Welcome to Akshi Residencies!</h1>
+      <p>View our hand-picked villas from all over the world</p>
+      <p>
+        <a class="btn btn-primary btn-large" href="/villas/new"
+          >Add New Residence</a
+        >
+      </p>
+    </div>
+  </header>
+
+  <div class="row text-center" style="display: flex; flex-wrap: wrap">
+    <% villas.forEach(function(ground){ %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= ground.image %>" />
+        <div class="caption">
+          <h4><%= ground.name %></h4>
+        </div>
+        <p>
+          <a href="/villas/<%= ground._id %>" class="btn btn-primary"
+            >More Info</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <%});%>
+  </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

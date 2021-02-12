@@ -1,0 +1,63 @@
+<%-include ('../partials/header') %>
+<h1 style="text-align: center">Create a new Residence</h1>
+<!-- to put everthing inside a box -->
+<div class="container">
+  <div class="row">
+    <div style="width: 30%; margin: 30px auto">
+      <form action="/villas" method="POST">
+        <!-- for spacing in text , image and button, we will add div around each one of them -->
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            placeholder="name"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="number"
+            name="price"
+            placeholder="price"
+            min="100"
+            step="100"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="string"
+            name="contact"
+            placeholder="contact"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="image"
+            placeholder="image url"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="description"
+            placeholder="description"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-default btn-block btn-primary">
+            Submit!
+          </button>
+        </div>
+      </form>
+      <a href="/villas"><b>Go Back!</b></a>
+    </div>
+  </div>
+</div>
+
+<%-include ('../partials/footer') %>
