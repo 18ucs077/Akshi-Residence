@@ -23,3 +23,11 @@
 ###  SignUp Page
 
 ![](image-6.PNG)
+
+### Add New Comment Page
+
+![](image-7.PNG)
+
+### Edit Villa Page
+
+![](image-8.PNG)
